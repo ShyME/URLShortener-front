@@ -1,27 +1,15 @@
-# URLShortenerFront
+# URLShortener-Front
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
+Simple front-end application hosted by default on `http://localhost:4200` made with a bit of Angular and bootstrap for URL Shortener service. 
 
-## Development server
+## POST long urls
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+At home directory there's an input area for an URL to be shortened. With a button click a POST request is made to a back-end server located at `http://localhost:8080` with a raw String describing long URL to be shortened. Once the response is received a shortened link appears with a Copy button next to it.
 
-## Code scaffolding
+## GET short urls
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Navigating to `http://localhost:4200/{{id}}` with id param recognized by a back-end server you get redirected to the URL connected with that ID. Failing to find given ID results in a redirect to home directory of the front-end app.
 
-## Build
+## Example
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+![Example screenshot](https://i.imgur.com/PuJjaRC.png)
